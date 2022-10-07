@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 10 Mar 2016 15:16:47 +0000
+Source: super-smack
+Binary: super-smack
+Architecture: source amd64
+Version: 1.3.3
+Distribution: unstable
+Urgency: low
+Maintainer: Genki Sugawara <sgwr_dts@yahoo.co.jp>
+Changed-By: Genki Sugawara <sgwr_dts@yahoo.co.jp>
+Description:
+ super-smack - Super Smack is a database benchmarking tool
+Changes:
+ super-smack (1.3.3) unstable; urgency=low
+ .
+   * Initial Release.
+Checksums-Sha1:
+ 1fe5fe6d686989306b59b2a2e9538b5bf4746beb 588 super-smack_1.3.3.dsc
+ 5f0da4fbfd21a5a23bf0684ca85617e0a44b26dd 83132 super-smack_1.3.3.tar.xz
+ 82daddd0adce88a053a17ef41a11f886be687643 45398 super-smack_1.3.3_amd64.deb
+Checksums-Sha256:
+ 1a31717a86ddae14971dd6fc65ffad4f3065eb414fd791450129a568bae535a6 588 super-smack_1.3.3.dsc
+ e319fbd727ba14c224dfb7ced474b869b0d598b19f95a417870bedd78b6324f1 83132 super-smack_1.3.3.tar.xz
+ ddb62ed870ee92a1b5d6791fe1aae2324d86f371023efe953a8765a2fe99d2d6 45398 super-smack_1.3.3_amd64.deb
+Files:
+ 453747468ae3294c74b408080bbeaa55 588 utils optional super-smack_1.3.3.dsc
+ b61fdfdc98bf7c4b0489d78bc3fe7bb4 83132 utils optional super-smack_1.3.3.tar.xz
+ 6c8585feb8a6451287b3c75c85dc25f5 45398 utils optional super-smack_1.3.3_amd64.deb

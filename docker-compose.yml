@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+
+# super-smack  
+    super-smack:
+      container_name: super-smack
+      build: ./super-smack
+      tty: true
+      volumes:
+        - ./workspace:/home/workspace
+        - ./super-smack:/var/smack-data
+
+# mysql-5.7
+    mysql57:
+      container_name: test-mysql57
+      image: mysql:5.7
+      environment:
+        - MYSQL_DATABASE=test
+        - MYSQL_USER=test
+        - MYSQL_PASSWORD=test0987
+        - MYSQL_ROOT_PASSWORD=root0987
+        - TZ=UTC
+      volumes:
+        - ./data57:/var/lib/mysql
+        - ./mysql57/conf:/etc/mysql/conf.d
+        - ./mysql57/my.cnf:/etc/my.cnf
+        - ./super-smack:/var/smack-data
+      ports:
+        - "8136:3306"

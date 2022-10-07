@@ -1,0 +1,8 @@
+.DS_Store
+
+/data57/*
+!/data57/.gitkeep
+/data80/*
+!/data80/.gitkeep
+/super-smack/data/*
+!/super-smack/data/.gitkeep
