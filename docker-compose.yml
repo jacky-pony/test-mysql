@@ -1,28 +1,33 @@
 version: '3.5'
 
 networks:
-  default:
+  mydefault:
     driver: bridge
+    ipam:
+      config:
+        - subnet: "172.30.1.0/24"
 
 services:
 
-# super-smack  
+# super-smack-1.3.3
     super-smack:
       container_name: super-smack
       build: ./super-smack
       tty: true
       volumes:
-        - ./workspace:/home/workspace
-        - ./super-smack:/var/smack-data
+        - ./super-smack/conf:/home/super-smack
+        - ./super-smack/data:/var/smack-data
       networks:
-        - default
+        mydefault:
+          ipv4_address: 172.30.1.2
 
 # mysql-5.7
     mysql57:
       container_name: test-mysql57
       image: mysql:5.7
       networks:
-        - default
+        mydefault:
+          ipv4_address: 172.30.1.3
       environment:
         - MYSQL_DATABASE=test
         - MYSQL_USER=test
@@ -33,6 +38,6 @@ services:
         - ./data57:/var/lib/mysql
         - ./mysql57/conf:/etc/mysql/conf.d
         - ./mysql57/my.cnf:/etc/my.cnf
-        - ./super-smack:/var/smack-data
+        - ./super-smack/data:/var/smack-data
       ports:
         - "8136:3306"
